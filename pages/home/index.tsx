@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Container ,Row, Col} from 'react-bootstrap';
 
-const TSComponent = () => {
+import { ILocation } from '../../interfaces';
+
+import Map from "../../components/map/index";
+import UploadFile from '../../components/uploadFile';
+import NavbarComponent from '../../components/navbar';
+
+const Home = () => {
+ 
+  const [locations, setLocations] = useState<ILocation[]>([]);
+
     return(
-      <div className="App">
-          <br/>
-          <p>Coming Soon!</p>
+      <div className="App topNavbar">
+        <NavbarComponent/>
+        <Container className="mainContainer">
+          <Row>
+            <Col>
+              <UploadFile setLocations={setLocations}/>
+            </Col>
+          </Row>
+          <Map locations={locations}/>
+        </Container>
       </div>
     )
   }
 
-  export default TSComponent;
+export default Home;

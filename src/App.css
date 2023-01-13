@@ -1,3 +1,5 @@
+/* @import "~bootstrap/scss/bootstrap";
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,13 @@
     transform: rotate(360deg);
   }
 }
+
+.pageInnerContainer {
+  height: calc(100% - 65px);
+  overflow: auto;
+  position: relative;
+  top: 65px;
+}
+.topNavbar {
+  height: 100%;
+} */
